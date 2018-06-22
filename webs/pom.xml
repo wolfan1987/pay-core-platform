@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>pay-core-parent</artifactId>
+        <groupId>org.andrewliu.payplatform</groupId>
+        <version>0.0.1</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>systemmgr-web</module>
+        <module>paygateway-web</module>
+        <module>posp-web</module>
+        <module>channle-web</module>
+        <module>cardmgr-web</module>
+        <module>openapi-web</module>
+        <module>mq-webs</module>
+        <module>marketing-web</module>
+        <module>team-buying-web</module>
+        <module>rmcmgr-web</module>
+        <module>ordermgr-web</module>
+        <module>logmc-web</module>
+        <module>merchshop-web</module>
+        <module>ofo-web</module>
+        <module>goodsmgr-web</module>
+        <module>billreport-web</module>
+        <module>data-switching-web</module>
+        <module>ssologin-web</module>
+
+    </modules>
+    <artifactId>webs</artifactId>
+
+
+</project>

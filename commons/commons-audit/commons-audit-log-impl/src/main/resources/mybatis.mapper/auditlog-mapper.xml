@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zjht.biz.commons.audit.impl.dao.mapper.AuditMapper">
+
+    <resultMap id="auditLogResult" type="com.zjht.biz.commons.audit.api.entity.AuditLog">
+        <result column="MESSAGE" property="message"/>
+        <result column="TARGET" property="target"/>
+        <result column="CREATE_TIME" property="createTime"/>
+        <result column="FLAG" property="flag"/>
+        <result column="OPERATOR" property="operator"/>
+        <result column="OPERATOR_ID" property="operatorId"/>
+        <result column="IP" property="ip"/>
+    </resultMap>
+
+    <insert id="save">
+        <selectKey keyProperty="id" resultType="long" order="BEFORE">
+            SELECT T_AUDIT_LOG_SEQ.nextval FROM DUAL
+        </selectKey>
+        INSERT INTO T_AUDIT_LOG(
+        ID,
+        MESSAGE,
+        TARGET,
+        CREATE_TIME,
+        FLAG,
+        OPERATOR,
+        OPERATOR_ID,
+        IP
+        )
+        VALUES (
+        #{id},
+        #{message},#{target},#{createTime},#{flag},#{operator},#{operatorId},#{ip})
+    </insert>
+
+    <select id="findByAuditLog" resultMap="auditLogResult" useCache="false">
+        SELECT * FROM T_AUDIT_LOG
+        <where>
+            1=1
+            <if test="null != message and '' != message">
+                AND MESSAGE LIKE CONCAT(CONCAT('%', #{message, jdbcType=VARCHAR}),'%')
+            </if>
+            <if test="null != target and '' != target">
+                AND TARGET LIKE CONCAT(CONCAT('%', #{target, jdbcType=VARCHAR}),'%')
+            </if>
+            <if test="null != flag">
+                AND FLAG = #{flag, jdbcType=NUMERIC}
+            </if>
+
+            <if test="null != createTimeBegin and '' != createTimeBegin">
+                AND CREATE_TIME <![CDATA[>=]]> TO_DATE(#{createTimeBegin, jdbcType=VARCHAR},'yyyy-mm-dd hh24:mi:ss')
+            </if>
+            <if test="null != createTimeEnd and '' != createTimeEnd">
+                AND CREATE_TIME <![CDATA[<]]> trunc(TO_DATE(#{createTimeEnd, jdbcType=VARCHAR},'yyyy-mm-dd') + 1,'dd')
+            </if>
+        </where>
+        ORDER BY CREATE_TIME DESC
+    </select>
+</mapper>
