@@ -617,29 +617,30 @@
     </pluginManagement>
   </build>
   <repositories>
-    <repository>
-      <id>nexus</id>
-      <name>nexus</name>
-      <url>http://172.16.94.124:8081/nexus/content/groups/public/</url>
-    </repository>
-    <repository>
-      <id>alimaven</id>
-      <name>aliyun maven</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-    </repository>
+    <!--<repository>-->
+      <!--<id>nexus</id>-->
+      <!--<name>nexus</name>-->
+      <!--<url>http://172.16.94.124:8081/nexus/content/groups/public/</url>-->
+    <!--</repository>-->
+    <!--<repository>-->
+      <!--<id>alimaven</id>-->
+      <!--<name>aliyun maven</name>-->
+      <!--<url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+    <!--</repository>-->
+
   </repositories>
 
   <pluginRepositories>
-    <pluginRepository>
-      <id>nexus</id>
-      <name>nexus</name>
-      <url>http://172.16.94.124:8081/nexus/content/groups/public/</url>
-    </pluginRepository>
-    <pluginRepository>
-      <id>alimaven</id>
-      <name>aliyun maven</name>
-      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
-    </pluginRepository>
+    <!--<pluginRepository>-->
+      <!--<id>nexus</id>-->
+      <!--<name>nexus</name>-->
+      <!--<url>http://172.16.94.124:8081/nexus/content/groups/public/</url>-->
+    <!--</pluginRepository>-->
+    <!--<pluginRepository>-->
+      <!--<id>alimaven</id>-->
+      <!--<name>aliyun maven</name>-->
+      <!--<url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
+    <!--</pluginRepository>-->
   </pluginRepositories>
 
   <!--<distributionManagement>-->
