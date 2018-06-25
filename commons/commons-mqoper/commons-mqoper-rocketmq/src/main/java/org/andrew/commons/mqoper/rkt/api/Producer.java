@@ -2,7 +2,7 @@ package org.andrew.commons.mqoper.rkt.api;
 
 /**
  * 提供者接口。
- * @author huangzebin
+ * @author andrewliu
  */
 public interface Producer<T> {
 

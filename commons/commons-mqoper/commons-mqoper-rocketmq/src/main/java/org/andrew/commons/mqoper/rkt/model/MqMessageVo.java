@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * mq 消息实体。
- * @author huangzebin
+ * @author andrewliu
  */
 public class MqMessageVo implements Serializable {
 

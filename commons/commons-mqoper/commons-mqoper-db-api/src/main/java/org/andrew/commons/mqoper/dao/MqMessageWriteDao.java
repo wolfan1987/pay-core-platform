@@ -5,7 +5,7 @@ import org.andrew.commons.mqoper.entitys.MqMessage;
 
 /**
  * rocketMq消息读写接口。
- * Created by lijiguang on 2017/9/15.
+ * Created by andrewliu on 2017/9/15.
  */
 public interface MqMessageWriteDao extends MqMessageDao {
     MqMessage save(MqMessage message);

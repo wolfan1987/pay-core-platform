@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 文本消息调度重发。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public class RmqTextCaller extends JobCaller {
 

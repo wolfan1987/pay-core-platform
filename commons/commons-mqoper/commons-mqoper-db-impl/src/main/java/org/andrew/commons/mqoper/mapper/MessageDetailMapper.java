@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * MQ消息详情数据处理接口。
  *
- * @author lijiguang 2017年11月16日
+ * @author andrewliu 2017年11月16日
  */
 public interface MessageDetailMapper {
     /**

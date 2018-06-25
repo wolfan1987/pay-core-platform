@@ -18,7 +18,7 @@ import java.util.Properties;
 /**
  * MyBatis分页拦截器。
  *
- * @author lijiguang on 2017-5-24
+ * @author andrewliu on 2017-5-24
  * @version 1.0.0
  */
 @Intercepts({@Signature(type = StatementHandler.class,method = "prepare",args = {Connection.class}),

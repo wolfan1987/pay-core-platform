@@ -9,7 +9,7 @@ import java.util.Date;
 /**
  * mq消息对应数据库的实体。
  *
- * @author lijiguang 2017年9月15日
+ * @author andrewliu 2017年9月15日
  */
 public class MqMessage implements Model<Long> {
 

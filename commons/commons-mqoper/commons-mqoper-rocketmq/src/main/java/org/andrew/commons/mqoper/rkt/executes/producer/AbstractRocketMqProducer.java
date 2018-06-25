@@ -11,7 +11,7 @@ import  org.andrew.commons.mqoper.rkt.scheduler.JobScheduler;
 /**
  * rocketMq提供者模板。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public abstract class AbstractRocketMqProducer<T extends MqMessageVo> extends DefaultMQProducer
     implements Producer<T> {

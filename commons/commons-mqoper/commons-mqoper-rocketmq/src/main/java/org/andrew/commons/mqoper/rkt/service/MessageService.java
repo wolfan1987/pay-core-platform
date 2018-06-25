@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 /**
  * MQ消息数据库持久化操作。
  *
- * @author lijiguang 2017年9月15日
+ * @author andrewliu 2017年9月15日
  */
 @Service
 public class MessageService {

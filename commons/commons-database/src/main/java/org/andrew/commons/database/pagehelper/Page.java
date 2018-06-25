@@ -8,7 +8,7 @@ import java.util.Map;
 /**
  * 分页。
  *
- * @author lijiguang 2017-5-24
+ * @author andrewliu 2017-5-24
  * @version 1.0.0
  */
 public class Page<E> implements Serializable {

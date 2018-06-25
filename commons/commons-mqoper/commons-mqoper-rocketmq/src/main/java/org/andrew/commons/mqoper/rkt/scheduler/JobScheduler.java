@@ -8,7 +8,7 @@ import java.util.concurrent.DelayQueue;
 /**
  * 队列定时调度器。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public class JobScheduler extends Thread {
 

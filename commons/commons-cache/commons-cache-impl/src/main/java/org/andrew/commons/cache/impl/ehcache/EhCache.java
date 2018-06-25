@@ -15,7 +15,7 @@ import java.util.*;
 /**
  * 缓存处理。
  *
- * @author lijiguang
+ * @author andrewliu
  */
 public class EhCache implements Cache {
     private SysCacheManager  sysCacheManager;

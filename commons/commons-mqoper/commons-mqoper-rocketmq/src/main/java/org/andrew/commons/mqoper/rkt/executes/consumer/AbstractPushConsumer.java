@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * 消费者订阅模板，提供消费接口外部调用。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public abstract class AbstractPushConsumer extends DefaultMQPushConsumer implements Consumer {
 

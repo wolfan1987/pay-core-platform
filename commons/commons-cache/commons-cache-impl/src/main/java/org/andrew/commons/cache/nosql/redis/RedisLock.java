@@ -13,7 +13,7 @@ import java.io.Serializable;
 /**
  * redis锁实现。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public class RedisLock implements Serializable {
 

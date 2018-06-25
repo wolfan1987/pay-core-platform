@@ -2,7 +2,7 @@ package org.andrew.commons.mqoper.rkt.model;
 
 /**
  * 文本消息实体。
- * @author huangzebin
+ * @author andrewliu
  */
 public class TextMsgVo extends MqMessageVo {
 

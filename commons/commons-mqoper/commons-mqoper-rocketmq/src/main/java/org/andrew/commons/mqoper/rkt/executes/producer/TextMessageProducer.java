@@ -20,7 +20,7 @@ import java.util.UUID;
 /**
  * 文本消息提供者。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public class TextMessageProducer extends AbstractRocketMqProducer<TextMsgVo> {
 

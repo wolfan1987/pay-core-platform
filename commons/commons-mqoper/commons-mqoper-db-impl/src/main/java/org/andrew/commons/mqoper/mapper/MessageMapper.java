@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * mybatis 对应的对mq消息的增删改查。
  *
- * @author lijiguang 2017年9月15日
+ * @author andrewliu 2017年9月15日
  */
 public interface MessageMapper {
 

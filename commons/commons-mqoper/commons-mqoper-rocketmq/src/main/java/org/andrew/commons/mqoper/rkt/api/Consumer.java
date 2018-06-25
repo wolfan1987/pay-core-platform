@@ -7,7 +7,7 @@ import org.apache.rocketmq.client.exception.MQClientException;
 /**
  * consumer接口。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public interface Consumer {
 

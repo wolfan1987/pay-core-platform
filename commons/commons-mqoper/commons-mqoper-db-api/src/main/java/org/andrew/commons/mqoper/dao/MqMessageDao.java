@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * 系统配置。
- * Created by lijiguang on 2017/8/15.
+ * Created by andrewliu on 2017/8/15.
  */
 public interface MqMessageDao {
 

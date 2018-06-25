@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * 任务实体，控制定时任务中的轮询次数，
  * 指定访问时间等。
  *
- * @author huangzebin
+ * @author andrewliu
  */
 public class Job implements Delayed {
 

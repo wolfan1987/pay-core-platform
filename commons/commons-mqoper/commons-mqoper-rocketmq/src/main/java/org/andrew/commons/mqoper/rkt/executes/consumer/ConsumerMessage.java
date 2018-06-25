@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 /**
  * 消费消息实体。
- * @author huangzebin
+ * @author andrewliu
  */
 public class ConsumerMessage implements Serializable {
 
