@@ -5,7 +5,7 @@ import java.io.UnsupportedEncodingException;
 
 /**
  * 加密工具类。
- * Created by lidan on 2017/8/10.
+ * Created by andrewliu on 2017/8/10.
  */
 public class DecodeUtil {
     private static char[] base64EncodeChars = new char[] {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',

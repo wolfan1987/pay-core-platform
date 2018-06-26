@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * 批次号生成。
  *
- * @author huangjianneng
+ * @author andrewliu
  */
 public class BatchNoUtil {
 

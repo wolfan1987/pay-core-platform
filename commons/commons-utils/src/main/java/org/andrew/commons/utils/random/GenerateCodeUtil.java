@@ -4,7 +4,7 @@ import java.util.Random;
 
 /**
  * 生成短信验证码。
- * Created by lidan on 2017/7/18.
+ * Created by andrewliu on 2017/7/18.
  */
 public class GenerateCodeUtil {
     /**

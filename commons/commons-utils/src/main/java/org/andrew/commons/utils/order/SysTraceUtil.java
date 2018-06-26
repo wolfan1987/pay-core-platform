@@ -4,7 +4,7 @@ import java.util.UUID;
 
 /**
  * 随机流水。
- * Created by lidan on 2017/6/27.
+ * Created by andrewliu on 2017/6/27.
  */
 public class SysTraceUtil {
 

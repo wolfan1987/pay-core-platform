@@ -49,6 +49,7 @@
     <zk.version>3.4.9</zk.version>
     <zkclient.version>0.10</zkclient.version>
     <fastjson.version>1.2.38</fastjson.version>
+    <net.json-lib.version>2.4</net.json-lib.version>
     <javassist.version>3.20.0-GA</javassist.version>
     <thymeleaf.version>3.0.7.RELEASE</thymeleaf.version>
     <spring-data-redis.version>1.8.7.RELEASE</spring-data-redis.version>
@@ -75,6 +76,7 @@
     <curator.version>2.5.0</curator.version>
     <itextpdf.version>5.5.10</itextpdf.version>
     <kryo.version>4.0.1</kryo.version>
+    <jackson-databind.versioin>2.6.3</jackson-databind.versioin>
   </properties>
 
   <modules>
@@ -344,7 +346,11 @@
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
       </dependency>
-
+      <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+      </dependency>
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-jdbc</artifactId>
