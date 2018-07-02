@@ -28,6 +28,7 @@
         <module>commons-database</module>
         <module>commons-wechat</module>
         <module>commons-wechatweb</module>
+        <module>commons-webui</module>
 
     </modules>
 
