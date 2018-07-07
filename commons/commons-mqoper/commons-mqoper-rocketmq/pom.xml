@@ -97,11 +97,11 @@
             <version>${rocketmq.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.apache.rocketmq</groupId>
-            <artifactId>rocketmq-srvutil</artifactId>
-            <version>${rocketmq.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.rocketmq</groupId>-->
+            <!--<artifactId>rocketmq-srvutil</artifactId>-->
+            <!--<version>${rocketmq.version}</version>-->
+        <!--</dependency>-->
 
         <!--test-->
         <dependency>

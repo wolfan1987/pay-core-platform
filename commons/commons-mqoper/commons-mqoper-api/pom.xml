@@ -11,5 +11,14 @@
     <packaging>jar</packaging>
     <artifactId>commons-mqoper-api</artifactId>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.andrewliu.payplatform</groupId>
+                <artifactId>commons-exceptions</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 </project>
