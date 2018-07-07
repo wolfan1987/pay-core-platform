@@ -31,8 +31,9 @@
 
         <!-- xml 操作-->
         <dependency>
-            <groupId>jdom</groupId>
+            <groupId>org.jdom</groupId>
             <artifactId>jdom</artifactId>
+            <version>${jdom.version}</version>
         </dependency>
 
         <!--常用算法工具包-->
