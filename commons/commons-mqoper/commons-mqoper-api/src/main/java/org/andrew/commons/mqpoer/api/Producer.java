@@ -1,5 +1,8 @@
 package org.andrew.commons.mqpoer.api;
 
+import org.andrew.commons.mqpoer.entitys.ProduceMessage;
+import org.andrew.commons.mqpoer.entitys.ProduceResult;
+
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
  * @Description:  消息生产基本接口
@@ -9,7 +12,12 @@ package org.andrew.commons.mqpoer.api;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Producer {
+public interface Producer<P,R> {
 
+    boolean  start();
+
+    R  send( P  produceMessage);
+
+    boolean  stop();
 
 }

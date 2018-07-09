@@ -9,6 +9,15 @@ package org.andrew.commons.mqpoer.api;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Consumer {
+public interface Consumer<M> {
+
+
+
+
+    boolean  start();
+
+    boolean  stop();
+
+    void  consumeMsg(M m);
 
 }

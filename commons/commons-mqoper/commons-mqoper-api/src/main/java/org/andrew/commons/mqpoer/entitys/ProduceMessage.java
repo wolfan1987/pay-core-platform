@@ -9,7 +9,7 @@ package org.andrew.commons.mqpoer.entitys;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class BaseMessageFormat {
+public class ProduceMessage {
 
     //基本消息ID
     private  String  msgId;
@@ -55,7 +55,7 @@ public class BaseMessageFormat {
 
     @Override
     public String toString() {
-        return "BaseMessageFormat{" +
+        return "ProduceMessage{" +
                 "msgId='" + msgId + '\'' +
                 ", topic='" + topic + '\'' +
                 ", content='" + content + '\'' +
