@@ -4,7 +4,7 @@ import org.andrew.commons.exception.context.ContextException;
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.exception.mq.ProducerException;
 import org.andrew.commons.mqpoer.entitys.ConsumeMessage;
-import org.andrew.commons.mqpoer.entitys.MQContextEnvParams;
+import org.andrew.commons.mqpoer.config.MQContextEnvConfig;
 import org.andrew.commons.mqpoer.entitys.ProduceMessage;
 
 /**
@@ -22,7 +22,7 @@ public interface MQSimpleContext{
      * 初始化消息处理上下文环境
      * @throws ContextException
      */
-    public  void initContext(MQContextEnvParams contextEnvParams) throws ContextException;
+    public  void initContext(MQContextEnvConfig contextEnvParams) throws ContextException;
     /**
      * 生产消息到MQ
      * @return

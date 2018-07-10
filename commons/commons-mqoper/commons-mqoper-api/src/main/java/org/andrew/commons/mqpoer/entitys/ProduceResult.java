@@ -8,4 +8,5 @@ package org.andrew.commons.mqpoer.entitys;
  * @Other: A Lucky Man
  */
 public class ProduceResult {
+
 }

@@ -1,8 +1,7 @@
 package org.andrew.commons.mqoper.rkt.entityext;
 
-import org.andrew.commons.mqpoer.entitys.ProduceMessage;
+import org.andrew.commons.mqpoer.entitys.ConsumeMessage;
 
-import java.io.Serializable;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -11,5 +10,5 @@ import java.io.Serializable;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class ConsumeMessageExt extends ProduceMessage implements Serializable{
+public class ConsumeMessageExt extends ConsumeMessage{
 }

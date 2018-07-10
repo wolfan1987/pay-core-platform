@@ -11,7 +11,7 @@ import java.io.Serializable;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class ProduceMessageExt extends ProduceMessage  implements Serializable{
+public class ProduceMessageExt extends ProduceMessage{
 
     private  String  tags;
 

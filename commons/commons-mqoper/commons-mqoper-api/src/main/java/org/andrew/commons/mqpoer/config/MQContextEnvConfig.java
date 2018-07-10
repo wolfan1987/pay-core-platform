@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.entitys;
+package org.andrew.commons.mqpoer.config;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -7,8 +7,7 @@ package org.andrew.commons.mqpoer.entitys;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class MQContextEnvParams {
-
+public class MQContextEnvConfig {
     /**
      * 日志记录器类型，如果是在web环境下，则不需要指定日志记录器类型
      * 支持: log4j2和logback

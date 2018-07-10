@@ -2,8 +2,8 @@ package org.andrew.commons.mqoper.rkt.abstracts;
 
 import org.andrew.commons.mqpoer.api.MQSimpleContext;
 import org.andrew.commons.mqpoer.api.TaskScheduler;
-import org.andrew.commons.mqpoer.entitys.ConsumeConfig;
-import org.andrew.commons.mqpoer.entitys.ProduceConfig;
+import org.andrew.commons.mqpoer.config.ConsumeConfig;
+import org.andrew.commons.mqpoer.config.ProduceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

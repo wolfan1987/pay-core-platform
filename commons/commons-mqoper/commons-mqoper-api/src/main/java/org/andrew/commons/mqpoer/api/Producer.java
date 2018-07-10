@@ -1,7 +1,5 @@
 package org.andrew.commons.mqpoer.api;
 
-import org.andrew.commons.mqpoer.entitys.ProduceMessage;
-import org.andrew.commons.mqpoer.entitys.ProduceResult;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -12,12 +10,12 @@ import org.andrew.commons.mqpoer.entitys.ProduceResult;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Producer<P,R> {
+public interface Producer<T,R> {
 
-    boolean  start();
+    boolean  doStart();
 
-    R  send( P  produceMessage);
+    R  doSend( T  produceMessage);
 
-    boolean  stop();
+    boolean  doShutDown();
 
 }

@@ -11,14 +11,18 @@ package org.andrew.commons.mqpoer.entitys;
  */
 public class ProduceMessage {
 
+    //消息组名
+    protected  String  groupName;
+    //消息实例名称
+    protected  String  instanceName;
     //基本消息ID
-    private  String  msgId;
+    protected  String  msgId;
     //消息主题
-    private  String  topic;
+    protected  String  topic;
     //消息内容
-    private  String  content;
+    protected  String  content;
     //消息发送时间
-    private  String  sendTime;
+    protected  String  sendTime;
 
 
     public String getMsgId() {
@@ -53,13 +57,19 @@ public class ProduceMessage {
         this.sendTime = sendTime;
     }
 
-    @Override
-    public String toString() {
-        return "ProduceMessage{" +
-                "msgId='" + msgId + '\'' +
-                ", topic='" + topic + '\'' +
-                ", content='" + content + '\'' +
-                ", sendTime='" + sendTime + '\'' +
-                '}';
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public String getInstanceName() {
+        return instanceName;
+    }
+
+    public void setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
     }
 }
