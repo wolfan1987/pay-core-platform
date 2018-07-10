@@ -11,7 +11,7 @@ import org.andrew.commons.mqpoer.entitys.ProduceMessage;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface ProducerExt<T extends ProduceMessage> {
+public interface ProducerExt<T> {
 
     /**
      * 处理消息前的预处理

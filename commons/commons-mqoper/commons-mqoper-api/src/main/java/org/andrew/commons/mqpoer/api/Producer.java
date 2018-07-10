@@ -1,6 +1,8 @@
 package org.andrew.commons.mqpoer.api;
 
 
+import org.andrew.commons.exception.mq.ProducerException;
+
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
  * @Description:  消息生产基本接口
@@ -10,12 +12,14 @@ package org.andrew.commons.mqpoer.api;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Producer<T,R> {
+public interface Producer<T,R,C> {
 
-    boolean  doStart();
+    void  setConfig(C  config);
 
-    R  doSend( T  produceMessage);
+    void  doStart() throws ProducerException;
 
-    boolean  doShutDown();
+    R  doSend( T  produceMessage)throws ProducerException;
+
+    void  doShutDown() throws ProducerException;
 
 }

@@ -4,7 +4,8 @@ import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.mqoper.rkt.abstracts.AbstractConsumer;
 import org.andrew.commons.mqoper.rkt.model.TestConsumeMessage;
 import org.andrew.commons.mqpoer.config.ConsumeConfig;
-import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -15,6 +16,8 @@ import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
  * @Other: A Lucky Man
  */
 public class TestMQConsumer  extends AbstractConsumer<TestConsumeMessage,ConsumeConfig> {
+
+    private static final Logger logger = LoggerFactory.getLogger(TestMQConsumer.class);
 
     @Override
     public void processor(TestConsumeMessage consumeMessage) throws ConsumerException {
@@ -30,9 +33,6 @@ public class TestMQConsumer  extends AbstractConsumer<TestConsumeMessage,Consume
     public boolean endProcessor(TestConsumeMessage consumeMessage) throws ConsumerException {
         return false;
     }
-
-
-    @Override
     public void setConfig(ConsumeConfig config) {
         this.config = config;
     }

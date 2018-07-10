@@ -8,6 +8,8 @@ import org.andrew.commons.mqpoer.config.AbstractConfig;
 import org.andrew.commons.mqpoer.config.ConsumeConfig;
 import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -17,6 +19,9 @@ import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
  * @Other: A Lucky Man
  */
 public abstract class AbstractConsumer<T extends ConsumeMessageExt,C extends AbstractConfig> extends DefaultMQPushConsumer implements Consumer<T,C>, ConsumerExt<T> {
+
+
+    private static final Logger logger = LoggerFactory.getLogger(AbstractConsumer.class);
 
     protected   ConsumeConfig  config;
 
