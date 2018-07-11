@@ -1,6 +1,7 @@
-package org.andrew.commons.mqpoer.api;
+package org.andrew.commons.mqoper.api;
 
 import org.andrew.commons.exception.mq.ConsumerException;
+import org.andrew.commons.mqoper.config.Config;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -11,7 +12,7 @@ import org.andrew.commons.exception.mq.ConsumerException;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Consumer<T,C> {
+public interface Consumer<T,C> extends Config {
 
     void  setConfig(C  config);
     /**
@@ -24,7 +25,7 @@ public interface Consumer<T,C> {
      * 关闭消费服务
      * @return
      */
-    void  doShutDown();
+    void  doShutDown() throws ConsumerException;
 
     /**
      * 处理消息

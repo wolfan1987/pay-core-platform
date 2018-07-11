@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.emnus;
+package org.andrew.commons.mqoper.emnus;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -8,6 +8,10 @@ package org.andrew.commons.mqpoer.emnus;
  * @Other: A Lucky Man
  */
 public enum LoggerEnums {
+    LOGGER4j2_CLASSPATH("LOG4J42","CLASSPATH","log4j2.xml"),
+    LOGGER4J2_METAINF("LOG4J42","META-INF","log4j2.xml"),
+    LOGBACK_CLASSPATH("LOGBACK","CLASSPATH","logback.xml"),
+    LOGBACK_METAINF("LOGBACK","META-INF","logback.xml")
     ;
     //日志记录器类型(log4j2,logback
     private  String  loggerName;
@@ -16,7 +20,7 @@ public enum LoggerEnums {
     //日志记录器配置文件名称
     private   String   configFileName;
 
-    LoggerEnums(String loggerName, String pathType, String configFileName) {
+  private   LoggerEnums(String loggerName, String pathType, String configFileName) {
         this.loggerName = loggerName;
         this.pathType = pathType;
         this.configFileName = configFileName;

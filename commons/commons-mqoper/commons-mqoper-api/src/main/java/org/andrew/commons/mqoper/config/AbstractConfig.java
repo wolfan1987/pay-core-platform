@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.config;
+package org.andrew.commons.mqoper.config;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -23,7 +23,11 @@ public  abstract  class AbstractConfig implements  Config {
     /**
      * 是否生产消费时支持sql查询参数
      */
-    private  boolean  isSupportSqlQuery = false;
+    protected  boolean  isSupportSqlQuery = false;
+    /**
+     * MQ服务器地址
+     */
+    protected  String  nameSrv;
 
     @Override
     public void setConfigName(String configName) {
@@ -71,5 +75,15 @@ public  abstract  class AbstractConfig implements  Config {
 
     public void setSupportSqlQuery(boolean supportSqlQuery) {
         isSupportSqlQuery = supportSqlQuery;
+    }
+
+    @Override
+    public void setNameSrv(String nameSrv) {
+        this.nameSrv = nameSrv;
+    }
+
+    @Override
+    public String getNameSrv() {
+        return this.nameSrv;
     }
 }

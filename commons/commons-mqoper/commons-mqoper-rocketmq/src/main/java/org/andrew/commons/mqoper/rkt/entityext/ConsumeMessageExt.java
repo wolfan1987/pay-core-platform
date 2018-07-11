@@ -1,6 +1,6 @@
 package org.andrew.commons.mqoper.rkt.entityext;
 
-import org.andrew.commons.mqpoer.entitys.ConsumeMessage;
+import org.andrew.commons.mqoper.entitys.ConsumeMessage;
 
 
 /**

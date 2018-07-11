@@ -1,8 +1,6 @@
 package org.andrew.commons.mqoper.rkt.entityext;
 
-import org.andrew.commons.mqpoer.entitys.ProduceMessage;
-
-import java.io.Serializable;
+import org.andrew.commons.mqoper.entitys.ProduceMessage;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)

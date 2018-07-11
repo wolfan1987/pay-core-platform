@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.config;
+package org.andrew.commons.mqoper.config;
 
 import java.util.HashMap;
 import java.util.Map;

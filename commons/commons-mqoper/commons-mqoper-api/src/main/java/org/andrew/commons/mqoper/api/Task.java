@@ -1,4 +1,6 @@
-package org.andrew.commons.mqpoer.api;
+package org.andrew.commons.mqoper.api;
+
+import java.util.concurrent.Delayed;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -7,10 +9,8 @@ package org.andrew.commons.mqpoer.api;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Task {
+public interface Task  extends Delayed{
 
-    public void  execute();
-
-
+    void  execute();
 
 }

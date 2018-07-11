@@ -3,7 +3,7 @@ package org.andrew.commons.mqoper.rkt.impl;
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.mqoper.rkt.abstracts.AbstractConsumer;
 import org.andrew.commons.mqoper.rkt.model.TestConsumeMessage;
-import org.andrew.commons.mqpoer.config.ConsumeConfig;
+import org.andrew.commons.mqoper.config.ConsumeConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

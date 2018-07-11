@@ -1,8 +1,7 @@
-package org.andrew.commons.mqpoer.api;
+package org.andrew.commons.mqoper.api;
 
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.exception.mq.ProducerException;
-import org.andrew.commons.mqpoer.entitys.ProduceMessage;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)

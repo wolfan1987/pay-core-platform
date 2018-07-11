@@ -1,11 +1,11 @@
 package org.andrew.commons.mqoper.rkt.abstracts;
 
-import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.exception.mq.ProducerException;
 import org.andrew.commons.mqoper.rkt.entityext.ProduceMessageExt;
-import org.andrew.commons.mqpoer.api.Producer;
-import org.andrew.commons.mqpoer.api.ProducerExt;
-import org.andrew.commons.mqpoer.config.ProduceConfig;
+import org.andrew.commons.mqoper.api.Producer;
+import org.andrew.commons.mqoper.api.ProducerExt;
+import org.andrew.commons.mqoper.api.TaskScheduler;
+import org.andrew.commons.mqoper.config.ProduceConfig;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends ProduceConfig,R> extends DefaultMQProducer implements Producer<T,R,C>,ProducerExt<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractProducer.class);
+
+    protected TaskScheduler  taskScheduler;
 
     protected  ProduceConfig   config;
 
@@ -37,5 +39,45 @@ public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends Pr
         this.shutdown();
     }
 
+    public TaskScheduler getTaskScheduler() {
+        return taskScheduler;
+    }
+    public void setTaskScheduler(TaskScheduler taskScheduler) {
+        this.taskScheduler = taskScheduler;
+    }
 
+    @Override
+    public void setNameSrv(String nameSrv) {
+
+    }
+
+    @Override
+    public String getNameSrv() {
+        return null;
+    }
+
+    @Override
+    public void setConfigName(String configName) {
+
+    }
+
+    @Override
+    public String getConfigName() {
+        return null;
+    }
+
+    @Override
+    public boolean validateConfig() {
+        return false;
+    }
+
+    @Override
+    public boolean validatePullConfig() {
+        return false;
+    }
+
+    @Override
+    public boolean validatePushConfig() {
+        return false;
+    }
 }

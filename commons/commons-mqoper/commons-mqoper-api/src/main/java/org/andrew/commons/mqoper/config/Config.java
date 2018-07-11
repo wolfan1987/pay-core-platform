@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.config;
+package org.andrew.commons.mqoper.config;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -9,27 +9,31 @@ package org.andrew.commons.mqpoer.config;
  */
 public interface Config {
 
-    public  void  setConfigName(String  configName);
+    void  setNameSrv(String  nameSrv);
 
-    public  String  getConfigName();
+    String  getNameSrv();
+
+     void  setConfigName(String  configName);
+
+     String  getConfigName();
 
     /**
      * 验证必要配置是否正确
      * @return
      */
-    public  boolean  validateConfig();
+     boolean  validateConfig();
 
     /**
      * 验证进行pull消费时相关配置条件
      * @return
      */
-    public   boolean   validatePullConfig();
+      boolean   validatePullConfig();
 
     /**
      * 验证进行push消费时相关配置条件
      * @return
      */
-    public   boolean  validatePushConfig();
+      boolean  validatePushConfig();
 
 
 }

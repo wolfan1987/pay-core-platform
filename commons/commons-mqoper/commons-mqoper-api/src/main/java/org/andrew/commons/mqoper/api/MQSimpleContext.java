@@ -1,11 +1,12 @@
-package org.andrew.commons.mqpoer.api;
+package org.andrew.commons.mqoper.api;
 
 import org.andrew.commons.exception.context.ContextException;
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.exception.mq.ProducerException;
-import org.andrew.commons.mqpoer.entitys.ConsumeMessage;
-import org.andrew.commons.mqpoer.config.MQContextEnvConfig;
-import org.andrew.commons.mqpoer.entitys.ProduceMessage;
+import org.andrew.commons.mqoper.entitys.ConsumeMessage;
+import org.andrew.commons.mqoper.config.MQContextEnvConfig;
+import org.andrew.commons.mqoper.entitys.ProduceMessage;
+import org.andrew.commons.mqoper.entitys.ProduceResult;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -22,16 +23,16 @@ public interface MQSimpleContext{
      * 初始化消息处理上下文环境
      * @throws ContextException
      */
-    public  void initContext(MQContextEnvConfig contextEnvParams) throws ContextException;
+      void init(MQContextEnvConfig contextEnvParams) throws ContextException;
     /**
      * 生产消息到MQ
      * @return
      * @throws ProducerException
      */
-    public  boolean  produce(ProduceMessage  produceMessage)  throws ProducerException;
+     ProduceResult produce(ProduceMessage  produceMessage)  throws ProducerException;
 
-    public ConsumeMessage consume()  throws ConsumerException;
+     ConsumeMessage consume()  throws ConsumerException;
 
-    public  void  destoryContext();
+      void  destroy();
 
 }

@@ -1,4 +1,4 @@
-package org.andrew.commons.mqpoer.entitys;
+package org.andrew.commons.mqoper.entitys;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
