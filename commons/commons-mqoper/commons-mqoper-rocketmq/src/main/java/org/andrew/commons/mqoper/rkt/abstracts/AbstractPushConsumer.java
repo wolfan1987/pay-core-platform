@@ -1,6 +1,7 @@
 package org.andrew.commons.mqoper.rkt.abstracts;
 
 import org.andrew.commons.exception.mq.ConsumerException;
+import org.andrew.commons.mqoper.emnus.ConsumeTypeEnum;
 import org.andrew.commons.mqoper.rkt.entityext.ConsumeMessageExt;
 import org.andrew.commons.mqoper.api.Consumer;
 import org.andrew.commons.mqoper.api.ConsumerExt;
@@ -19,9 +20,9 @@ import org.slf4j.LoggerFactory;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public abstract class AbstractConsumer<T extends ConsumeMessageExt,C extends AbstractConfig> extends DefaultMQPushConsumer implements Consumer<T,C>, ConsumerExt<T> {
+public abstract class AbstractPushConsumer<T extends ConsumeMessageExt,C extends AbstractConfig> extends DefaultMQPushConsumer implements Consumer<T,C>, ConsumerExt<T> {
 
-    private static final Logger logger = LoggerFactory.getLogger(AbstractConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractPushConsumer.class);
 
     protected TaskScheduler taskScheduler;
 
@@ -49,6 +50,11 @@ public abstract class AbstractConsumer<T extends ConsumeMessageExt,C extends Abs
         this.shutdown();
     }
 
+    @Override
+    public ConsumeTypeEnum getConsumeType() {
+        return ConsumeTypeEnum.PUSH;
+    }
+
 
     public TaskScheduler getTaskScheduler() {
         return taskScheduler;
@@ -58,38 +64,6 @@ public abstract class AbstractConsumer<T extends ConsumeMessageExt,C extends Abs
         this.taskScheduler = taskScheduler;
     }
 
-    @Override
-    public String getNameSrv() {
-        return null;
-    }
 
-    @Override
-    public void setConfigName(String configName) {
 
-    }
-
-    @Override
-    public String getConfigName() {
-        return null;
-    }
-
-    @Override
-    public boolean validateConfig() {
-        return false;
-    }
-
-    @Override
-    public boolean validatePullConfig() {
-        return false;
-    }
-
-    @Override
-    public boolean validatePushConfig() {
-        return false;
-    }
-
-    @Override
-    public void setNameSrv(String nameSrv) {
-
-    }
 }

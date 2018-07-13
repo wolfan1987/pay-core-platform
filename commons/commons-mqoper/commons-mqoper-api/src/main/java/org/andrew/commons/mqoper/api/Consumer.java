@@ -2,6 +2,7 @@ package org.andrew.commons.mqoper.api;
 
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.mqoper.config.Config;
+import org.andrew.commons.mqoper.emnus.ConsumeTypeEnum;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -12,9 +13,11 @@ import org.andrew.commons.mqoper.config.Config;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Consumer<T,C> extends Config {
+public interface Consumer<T,C extends Config>  {
 
     void  setConfig(C  config);
+
+    C getConfig();
     /**
      * 启动消费服务
      * @return
@@ -32,5 +35,7 @@ public interface Consumer<T,C> extends Config {
      * @param consumeMessage
      */
     void     processor(T consumeMessage) throws ConsumerException;
+
+    ConsumeTypeEnum  getConsumeType();
 
 }

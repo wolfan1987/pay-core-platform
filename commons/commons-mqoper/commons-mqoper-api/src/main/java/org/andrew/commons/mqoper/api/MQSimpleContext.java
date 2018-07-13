@@ -8,6 +8,8 @@ import org.andrew.commons.mqoper.config.MQContextEnvConfig;
 import org.andrew.commons.mqoper.entitys.ProduceMessage;
 import org.andrew.commons.mqoper.entitys.ProduceResult;
 
+import java.util.Map;
+
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
  * @Description:  消息处理基本上下文对象,用于封装与mq进行通信、轮询调度、持久化相关处理
@@ -23,7 +25,7 @@ public interface MQSimpleContext{
      * 初始化消息处理上下文环境
      * @throws ContextException
      */
-      void init(MQContextEnvConfig contextEnvParams) throws ContextException;
+      void init() throws ContextException;
     /**
      * 生产消息到MQ
      * @return
@@ -31,7 +33,9 @@ public interface MQSimpleContext{
      */
      ProduceResult produce(ProduceMessage  produceMessage)  throws ProducerException;
 
-     ConsumeMessage consume()  throws ConsumerException;
+    void  setProducerMap(Map<String,Producer> producerMap);
+
+    void  setConsumerMap(Map<String,Consumer> consumerMap);
 
       void  destroy();
 

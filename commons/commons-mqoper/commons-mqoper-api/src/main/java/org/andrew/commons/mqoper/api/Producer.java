@@ -13,9 +13,11 @@ import org.andrew.commons.mqoper.config.Config;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Producer<T,R,C> extends Config {
+public interface Producer<T,R,C extends Config>  {
 
     void  setConfig(C  config);
+
+    C  getConfig();
 
     void  doStart() throws ProducerException;
 

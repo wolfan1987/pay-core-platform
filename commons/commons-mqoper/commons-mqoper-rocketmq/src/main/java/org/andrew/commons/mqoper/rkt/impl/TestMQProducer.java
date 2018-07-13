@@ -15,6 +15,11 @@ import org.andrew.commons.mqoper.entitys.ProduceResult;
  */
 public class TestMQProducer  extends AbstractProducer<TestProduceMessage,ProduceConfig,ProduceResult>{
 
+
+    public  TestMQProducer(){
+
+    }
+
     @Override
     public ProduceResult doSend(TestProduceMessage produceMessage) throws ProducerException {
         if(preProcessor(produceMessage)){
@@ -36,6 +41,11 @@ public class TestMQProducer  extends AbstractProducer<TestProduceMessage,Produce
     @Override
     public void setConfig(ProduceConfig config) {
         this.config = config;
+    }
+
+    @Override
+    public ProduceConfig getConfig() {
+       return this.config;
     }
 
 }

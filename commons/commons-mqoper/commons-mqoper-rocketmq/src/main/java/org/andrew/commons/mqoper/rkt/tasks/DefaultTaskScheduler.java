@@ -1,5 +1,7 @@
 package org.andrew.commons.mqoper.rkt.tasks;
 
+import org.andrew.commons.mqoper.rkt.abstracts.AbstractTaskScheduler;
+
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
  * @Description: 默认任务调度器
@@ -7,5 +9,10 @@ package org.andrew.commons.mqoper.rkt.tasks;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class DefaultTaskScheduler {
+public class DefaultTaskScheduler  extends AbstractTaskScheduler{
+
+    @Override
+    public void run() {
+
+    }
 }

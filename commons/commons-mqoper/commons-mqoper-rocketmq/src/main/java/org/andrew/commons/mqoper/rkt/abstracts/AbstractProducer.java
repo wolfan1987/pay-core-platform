@@ -46,38 +46,5 @@ public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends Pr
         this.taskScheduler = taskScheduler;
     }
 
-    @Override
-    public void setNameSrv(String nameSrv) {
 
-    }
-
-    @Override
-    public String getNameSrv() {
-        return null;
-    }
-
-    @Override
-    public void setConfigName(String configName) {
-
-    }
-
-    @Override
-    public String getConfigName() {
-        return null;
-    }
-
-    @Override
-    public boolean validateConfig() {
-        return false;
-    }
-
-    @Override
-    public boolean validatePullConfig() {
-        return false;
-    }
-
-    @Override
-    public boolean validatePushConfig() {
-        return false;
-    }
 }

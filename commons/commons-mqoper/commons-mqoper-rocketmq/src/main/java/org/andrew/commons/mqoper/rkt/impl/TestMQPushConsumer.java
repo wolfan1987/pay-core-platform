@@ -1,7 +1,7 @@
 package org.andrew.commons.mqoper.rkt.impl;
 
 import org.andrew.commons.exception.mq.ConsumerException;
-import org.andrew.commons.mqoper.rkt.abstracts.AbstractConsumer;
+import org.andrew.commons.mqoper.rkt.abstracts.AbstractPushConsumer;
 import org.andrew.commons.mqoper.rkt.model.TestConsumeMessage;
 import org.andrew.commons.mqoper.config.ConsumeConfig;
 import org.slf4j.Logger;
@@ -15,9 +15,9 @@ import org.slf4j.LoggerFactory;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class TestMQConsumer  extends AbstractConsumer<TestConsumeMessage,ConsumeConfig> {
+public class TestMQPushConsumer extends AbstractPushConsumer<TestConsumeMessage,ConsumeConfig> {
 
-    private static final Logger logger = LoggerFactory.getLogger(TestMQConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(TestMQPushConsumer.class);
 
     @Override
     public void processor(TestConsumeMessage consumeMessage) throws ConsumerException {
@@ -33,7 +33,13 @@ public class TestMQConsumer  extends AbstractConsumer<TestConsumeMessage,Consume
     public boolean endProcessor(TestConsumeMessage consumeMessage) throws ConsumerException {
         return false;
     }
+
     public void setConfig(ConsumeConfig config) {
         this.config = config;
+    }
+
+    @Override
+    public ConsumeConfig getConfig() {
+        return this.config;
     }
 }

@@ -1,5 +1,6 @@
 package org.andrew.commons.mqoper.config;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -159,5 +160,16 @@ public class ProduceConfig  extends AbstractConfig{
 
     public void setSupportTransaction(boolean supportTransaction) {
         isSupportTransaction = supportTransaction;
+    }
+
+    @Override
+    public String toString() {
+        return "ProduceConfig{" +
+                "topic='" + topic + '\'' +
+                ", tags='" + tags + '\'' +
+                ", selectorTags=" + Arrays.toString(selectorTags) +
+                ", defaultCharset='" + defaultCharset + '\'' +
+                ", isSupportTransaction=" + isSupportTransaction +
+                '}';
     }
 }
