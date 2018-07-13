@@ -7,6 +7,11 @@ package org.andrew.commons.mqoper.entitys;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class ProduceResult {
+public interface ProduceResult<T> {
+
+    T   getProduceResult();
+
+    void   setProduceResult(T t);
+
 
 }

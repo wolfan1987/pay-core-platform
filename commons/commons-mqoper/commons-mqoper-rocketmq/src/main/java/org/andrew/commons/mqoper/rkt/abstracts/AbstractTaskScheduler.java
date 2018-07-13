@@ -13,7 +13,7 @@ import java.util.concurrent.DelayQueue;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public abstract  class AbstractTaskScheduler extends Thread implements TaskScheduler {
+public abstract  class AbstractTaskScheduler  implements TaskScheduler {
 
     /**
      * 调度器名称。

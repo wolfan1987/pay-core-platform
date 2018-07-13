@@ -36,9 +36,9 @@ import java.util.concurrent.ConcurrentMap;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public class MQSimpleContext extends AbstractMQSimpleContext {
+public class DefaultMQSimpleContext extends AbstractMQSimpleContext {
 
-    private static final Logger logger = LoggerFactory.getLogger(MQSimpleContext.class);
+    private static final Logger logger = LoggerFactory.getLogger(DefaultMQSimpleContext.class);
     /**
      * key=groupName_topicname(存放所有生产者)
      */
@@ -61,10 +61,10 @@ public class MQSimpleContext extends AbstractMQSimpleContext {
     private BindingConfig pullConsumerBinding  =   BindingConfigFactory.getInstance().getPullConsumerBinding();
     private  MQContextEnvConfig contextEnvConfig = null;
 
-    public MQSimpleContext(MQContextEnvConfig contextEnvConfig) {
+    public DefaultMQSimpleContext(MQContextEnvConfig contextEnvConfig) {
         this.contextEnvConfig = contextEnvConfig;
     }
-    public MQSimpleContext() {}
+    public DefaultMQSimpleContext() {}
 
     @Override
     public void init() throws ContextException {

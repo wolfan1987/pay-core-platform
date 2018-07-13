@@ -19,7 +19,6 @@ public interface BindingConfig<S ,T extends Config> {
      */
     void binding(S dest, T src) throws BindingConfigException;
 
-
     void  reBinding(S dest,T src) throws BindingConfigException;
 
     void  clearBinding() throws BindingConfigException;

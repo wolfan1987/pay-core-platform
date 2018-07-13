@@ -12,6 +12,7 @@ import org.apache.rocketmq.client.consumer.DefaultMQPullConsumer;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Assert;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -20,50 +21,44 @@ import org.slf4j.LoggerFactory;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public abstract  class AbstractPullConsumer <T extends ConsumeMessageExt,C extends AbstractConfig> extends DefaultMQPullConsumer implements Consumer<T,C>, ConsumerExt<T> {
+public abstract class AbstractPullConsumer<T extends ConsumeMessageExt, C extends AbstractConfig> extends DefaultMQPullConsumer implements Consumer<T, C>, ConsumerExt<T> {
 
-private static final Logger logger = LoggerFactory.getLogger(AbstractPushConsumer.class);
+    private static final Logger logger = LoggerFactory.getLogger(AbstractPushConsumer.class);
 
-protected TaskScheduler taskScheduler;
+    protected TaskScheduler taskScheduler;
 
-protected ConsumeConfig config;
+    protected ConsumeConfig config;
 
-private MessageListenerConcurrently messageListener;
+    private MessageListenerConcurrently messageListener;
 
 
+    public void setMessageListener(MessageListenerConcurrently messageListener) {
+        this.messageListener = messageListener;
+    }
 
-public  void setMessageListener(MessageListenerConcurrently messageListener) {
-        this.messageListener =messageListener;
-        }
+    @Override
+    public void doStart() throws ConsumerException {
 
-@Override
-public void doStart() throws ConsumerException {
-        if(config!=null){
+    }
 
-        }else{
-        throw new  ConsumerException("----初始化消费配置出错，ConsumeConfig=null");
-        }
-        }
-
-@Override
-public void doShutDown() throws ConsumerException {
+    @Override
+    public void doShutDown() throws ConsumerException {
         this.shutdown();
-        }
+    }
 
-        @Override
-        public ConsumeTypeEnum getConsumeType() {
-                return ConsumeTypeEnum.PULL;
-        }
+    @Override
+    public ConsumeTypeEnum getConsumeType() {
+        return ConsumeTypeEnum.PULL;
+    }
 
 
-        public TaskScheduler getTaskScheduler() {
+    public TaskScheduler getTaskScheduler() {
         return taskScheduler;
-        }
+    }
 
-public void setTaskScheduler(TaskScheduler taskScheduler) {
+    public void setTaskScheduler(TaskScheduler taskScheduler) {
         this.taskScheduler = taskScheduler;
-        }
-
+    }
 
 
 }

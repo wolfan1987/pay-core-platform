@@ -16,6 +16,9 @@ public class BindingProducerConfig  implements BindingConfig<DefaultMQProducer,P
     @Override
     public void binding(DefaultMQProducer dest, ProduceConfig src) throws BindingConfigException {
         dest.setNamesrvAddr(src.getNameSrv());
+        dest.setProducerGroup(src.getGroupName());
+
+
     }
 
     @Override

@@ -7,7 +7,7 @@ package org.andrew.commons.mqoper.api;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface TaskScheduler {
+public interface TaskScheduler extends Runnable {
 
 
     /**

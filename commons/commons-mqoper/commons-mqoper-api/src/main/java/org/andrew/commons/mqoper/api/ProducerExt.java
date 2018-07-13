@@ -3,6 +3,8 @@ package org.andrew.commons.mqoper.api;
 import org.andrew.commons.exception.mq.ConsumerException;
 import org.andrew.commons.exception.mq.ProducerException;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
  * @Description: 生产消息时，为生产前和后添加处理点
@@ -17,7 +19,7 @@ public interface ProducerExt<T> {
      * @param produceMessage
      * @return
      */
-    boolean   preProcessor(T produceMessage)  throws ProducerException;
+    boolean   preProcessor(T produceMessage) throws ProducerException, UnsupportedEncodingException;
 
     /**
      * 消息处理完之后的业务操作
@@ -25,5 +27,5 @@ public interface ProducerExt<T> {
      * @return
      * @throws ConsumerException
      */
-    boolean   endProcessor(T produceMessage) throws ProducerException;
+    boolean  endProcessor(T produceMessage) throws ProducerException;
 }

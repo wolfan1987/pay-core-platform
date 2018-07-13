@@ -12,6 +12,7 @@ import org.apache.rocketmq.client.consumer.DefaultMQPushConsumer;
 import org.apache.rocketmq.client.consumer.listener.MessageListenerConcurrently;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.util.Assert;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -38,11 +39,9 @@ public abstract class AbstractPushConsumer<T extends ConsumeMessageExt,C extends
 
     @Override
     public void doStart() throws ConsumerException {
-        if(config!=null){
-
-        }else{
-            throw new  ConsumerException("----初始化消费配置出错，ConsumeConfig=null");
-        }
+        Assert.notNull(this.config,"启动推送消费者失败，ConsumeConfig = Null,请设置ConsumeConfig对象");
+        Assert.notNull(this.messageListener,"启动推送消费者失败，MessageListener对象 = NNull,请设置消费MessageListener 对象");
+        this.registerMessageListener(messageListener);
     }
 
     @Override
