@@ -29,7 +29,7 @@ import java.util.Map;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends ProduceConfig,R extends ProduceResult> extends DefaultMQProducer implements Producer<T,R,C>,ProducerExt<T> {
+public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends ProduceConfig,R extends ProduceResult> extends DefaultMQProducer implements Producer<T,MQProduceResult,C>,ProducerExt<T> {
 
     private static final Logger logger = LoggerFactory.getLogger(AbstractProducer.class);
 
@@ -59,7 +59,7 @@ public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends Pr
     }
 
     @Override
-    public ProduceResult doSend(ProduceMessageExt produceMessage) throws ProducerException {
+    public MQProduceResult doSend(ProduceMessageExt produceMessage) throws ProducerException {
         try {
             if(preProcessor(produceMessage)){
                 SendResult sendResult = this.send(sendMessage);

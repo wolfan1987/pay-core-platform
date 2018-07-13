@@ -22,6 +22,13 @@ import java.io.UnsupportedEncodingException;
  */
 public class TestMQProducer  extends AbstractProducer<TestProduceMessage,ProduceConfig,MQProduceResult>{
 
+    public TestMQProducer(){}
+
+    public  TestMQProducer(ProduceConfig  produceConfig){
+        this.config = produceConfig;
+    }
+
+
 //    @Override
 //    public MQProduceResult doSend(TestProduceMessage produceMessage) throws ProducerException {
 //        try {

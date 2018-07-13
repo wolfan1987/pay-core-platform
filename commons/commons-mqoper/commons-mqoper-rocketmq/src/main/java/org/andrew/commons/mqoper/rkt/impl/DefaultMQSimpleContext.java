@@ -72,7 +72,7 @@ public class DefaultMQSimpleContext extends AbstractMQSimpleContext {
         Assert.notNull(contextEnvConfig,"初始化MQ上下文环境时，contextEnvConfig = null");
         Assert.notNull(contextEnvConfig.getLoggerName(), "loggerName 不能為 NULL");
         try{
-            initContextLogger(contextEnvConfig);
+          //  initContextLogger(contextEnvConfig);
             startProducerConsumer();
         } catch (BindingConfigException e) {
             e.printStackTrace();
@@ -200,7 +200,7 @@ public class DefaultMQSimpleContext extends AbstractMQSimpleContext {
     private  void   initLogback(){
 
     }
-
+    @Override
     public  void  setMQContextEnvConfig(MQContextEnvConfig contextEnvConfig){
         this.contextEnvConfig = contextEnvConfig;
     }

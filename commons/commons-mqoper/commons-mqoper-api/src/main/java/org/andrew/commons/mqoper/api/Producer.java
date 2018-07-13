@@ -3,6 +3,8 @@ package org.andrew.commons.mqoper.api;
 
 import org.andrew.commons.exception.mq.ProducerException;
 import org.andrew.commons.mqoper.config.Config;
+import org.andrew.commons.mqoper.config.ProduceConfig;
+import org.andrew.commons.mqoper.entitys.ProduceResult;
 
 /**
  * @author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -13,7 +15,7 @@ import org.andrew.commons.mqoper.config.Config;
  * @Modifyed By:
  * @Other: A Lucky Man
  */
-public interface Producer<T,R,C extends Config>  {
+public interface Producer<T,R extends ProduceResult,C extends Config>  {
 
     void  setConfig(C  config);
 

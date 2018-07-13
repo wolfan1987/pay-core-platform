@@ -37,6 +37,8 @@ public interface MQSimpleContext{
 
     void  setConsumerMap(Map<String,Consumer> consumerMap);
 
+    void  setMQContextEnvConfig(MQContextEnvConfig  mqContextEnvConfig);
+
       void  destroy();
 
 }
