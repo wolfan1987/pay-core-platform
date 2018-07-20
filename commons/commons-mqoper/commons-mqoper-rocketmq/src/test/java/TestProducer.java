@@ -1,4 +1,5 @@
 import org.andrew.commons.exception.context.ContextException;
+import org.andrew.commons.exception.mq.ProducerException;
 import org.andrew.commons.mqoper.api.MQSimpleContext;
 import org.andrew.commons.mqoper.api.Producer;
 import org.andrew.commons.mqoper.config.MQContextEnvConfig;
@@ -15,6 +16,7 @@ import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.UUID;
 
 /**
  * @Author AndrewLiu (liudaan@chinaexpresscard.com)
@@ -59,16 +61,26 @@ public class TestProducer {
         System.out.println("start  mq context..........");
         try {
             mqSimpleContext.init();
+            ProduceMessageExt  produceMessageExt = new ProduceMessageExt();
+            produceMessageExt.setGroupName("lda");
+            produceMessageExt.setTopic("testtopic2");
+            produceMessageExt.setContent("Hello  MQ222.....");
+            produceMessageExt.setMsgId(UUID.randomUUID().toString());
+            mqSimpleContext.produce(produceMessageExt);
         } catch (ContextException e) {
+            e.printStackTrace();
+        } catch (ProducerException e) {
             e.printStackTrace();
         }
 
     }
 
 
+
+
     @After
     public void setDown(){
-
+        mqSimpleContext.destroy();
     }
 
 }

@@ -86,7 +86,7 @@ public abstract  class AbstractProducer<T extends ProduceMessageExt,C extends Pr
     @Override
     public void doShutDown() throws ProducerException {
         this.shutdown();
-        taskThread.interrupt();
+
     }
 
     @Override
